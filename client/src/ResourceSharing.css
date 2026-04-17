@@ -1,0 +1,197 @@
+:root {
+  --bg-start: #0f172a;
+  --bg-end: #020617;
+  --card-bg: rgba(15, 23, 42, 0.72);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --accent: #8b5cf6;
+  --accent-alt: #ffd700;
+}
+
+.rs-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(139, 92, 246, 0.2), transparent 40%), linear-gradient(135deg, var(--bg-start), var(--bg-end));
+  color: var(--text-main);
+}
+
+.rs-page .lf-card,
+.rs-page .lf-post,
+.rs-page .lf-item,
+.rs-page .lf-search {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.rs-page .lf-subtitle,
+.rs-page .lf-card p,
+.rs-page .lf-user,
+.rs-page .lf-item p {
+  color: var(--text-muted);
+}
+
+.rs-page .lf-eyebrow {
+  color: var(--text-muted);
+}
+
+.rs-page .lf-button,
+.rs-page .lf-button:visited {
+  background: linear-gradient(135deg, var(--accent), #6d28d9);
+  box-shadow: 0 8px 18px rgba(139, 92, 246, 0.24);
+}
+
+.resource-selection-page,
+.resource-sharing,
+.waiting-for-helper,
+.request-form {
+  min-height: calc(100vh - 120px);
+  margin-top: 120px;
+  padding: 20px;
+}
+
+.resource-selection-card,
+.option-card,
+.request-card,
+.modal-content {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  padding: 25px;
+}
+
+.resource-selection-card {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.resource-selection-card h1,
+.resource-sharing h2,
+.waiting-for-helper h2 {
+  margin: 0 0 18px;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.option-btn {
+  text-decoration: none;
+  color: inherit;
+}
+
+.option-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.option-card h3 {
+  color: #e2e8f0;
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.option-card p,
+.resource-selection-card p,
+.request-card p {
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.resource-buttons,
+.requests-list {
+  display: grid;
+  gap: 16px;
+}
+
+.btn-primary,
+.btn-primary.large {
+  width: 100%;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, var(--accent), #6d28d9);
+  border-radius: 0;
+  border: 0;
+  padding: 12px 16px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-primary.large:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(15, 23, 42, 0.55);
+  color: var(--text-main);
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-1px);
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.status-active { color: #10b981; font-weight: 700; }
+.status-pending { color: #f59e0b; font-weight: 700; }
+.status-accepted { color: #8b5cf6; font-weight: 700; }
+.status-declined,
+.status-cancelled { color: #ef4444; font-weight: 700; }
+
+@media (max-width: 768px) {
+  .resource-selection-card,
+  .request-card,
+  .option-card {
+    padding: 18px;
+  }
+
+  .resource-selection-card h1,
+  .resource-sharing h2,
+  .waiting-for-helper h2 {
+    font-size: 1.8rem;
+  }
+
+  .options,
+  .resource-buttons,
+  .requests-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+  .resource-selection-card h1 {
+    font-size: 2em;
+  }
+
+  .resource-buttons {
+    gap: 20px;
+  }
+
+  .btn-primary.large {
+    padding: 15px 25px;
+    font-size: 1em;
+  }

@@ -1,0 +1,44 @@
+.fine-page {
+  min-height: 100vh;
+}
+
+.fine-item {
+  gap: 10px;
+}
+
+.fine-status {
+  padding: 4px 10px;
+  border: 1px solid #fecaca;
+  background: #fee2e2;
+  color: #991b1b;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.fine-actions {
+  margin-top: 6px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fine-paid-btn {
+  border: 1px solid #16a34a;
+  background: #dcfce7;
+  color: #166534;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 0;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.fine-paid-btn:hover {
+  background: #bbf7d0;
+}
+
+.fine-footer-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
